@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Website</title>
+    <link rel="stylesheet" href="FoodOrder.css">
+</head>
+<body>
+
+    <nav>
+<ul>
+    <li><a href="#" onclick="toggleMenu()">Close Menu</a></li>
+    <li><a href="#about" >about</a></li>
+    <li><a href="#menu-list" > Menu-list</a></li>
+
+</ul>
+    </nav>
+    <header>
+
+        <h1>Food Order</h1>
+        <input type="text" id="search-box" placeholder="Search food..." onkeyup="searchFood()">
+    </header>
+
+    
+        <section class="menu" id="menu-list">
+        <div class="food-item">
+            <img src="pizz.jpg" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Price: ₹200</p>
+            <button onclick="addToCart('Pizza', 200)">Add to Cart</button>
+        </div>
+
+    
+        <div class="food-item">
+            <img src="burger.jpg" alt="Burger">
+            <h3>Burger</h3>
+            <p>Price: ₹100</p>
+            <button onclick="addToCart('Burger', 100)">Add to Cart</button>
+        </div>
+
+    
+        <div class="food-item">
+            <img src="fettuccine pasta.jpg" alt="Pasta">
+            <h3> fettuccine Pasta </h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('Pasta', 150)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="fusilli pasta.webp" alt="Pasta">
+            <h3>fusilli Pasta </h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('Pasta', 150)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="penne pasta.jpeg" alt=" penne Pasta">
+            <h3> Penne Pasta </h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart(' penne Pasta', 150)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="egg sandwitch.jpg" alt="Sandwich">
+            <h3>  Egg Sandwich </h3>
+            <p>Price: ₹120</p>
+            <button onclick="addToCart('Egg Sandwitch', 120)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="vegetable sandwitch.jpg" alt=" vegetable sandwitch">
+            <h3> Vegetable Sandwich </h3>
+            <p>Price: ₹120</p>
+            <button onclick="addToCart('  vegetable sandwitch', 120)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="momos.jpg" alt="momos">
+            <h3>momos </h3>
+            <p>Price: ₹150</p>
+            <button onclick="addToCart('momos', 150)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="chocolate ice cake.jpg" alt="cake">
+            <h3> chocolate cake</h3>
+            <p>price:₹400</p>
+            <button onclick="addToCart('chocolate cake', 400)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="pineapple cake.jpg" alt="cake">
+            <h3> pineapple cake</h3>
+            <p>price:₹350</p>
+            <button onclick="addToCart('pineapple cake', 350)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="venila cake.jpg" alt="cake">
+            <h3> Venilla cake</h3>
+            <p>price:₹450</p>
+            <button onclick="addToCart('Venillacake', 450)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="millk venila.jpg" alt="cake">
+            <h3> Mild chocolate vanilla cake</h3>
+            <p>price:₹400</p>
+            <button onclick="addToCart('mild chocolate venillacake', 400)">Add to Cart</button>
+        </div>
+
+        <div class="food-item">
+            <img src="cake.jpg" alt="cake">
+            <h3> cake</h3>
+            <p>price:₹800</p>
+            <button onclick="addToCart('cake', 800)">Add to Cart</button>
+        </div>
+    </section>
+    
+
+    <section class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: ₹<span id="total-price">0</span></strong></p>
+        <button onclick="placeOrder()">Order Now</button>
+    </section>
+
+    <script src="FoodOrder.js"></script>
+</body>
+</html>
