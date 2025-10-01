@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Resume Builder</h1>
+    <p>Fill your details and get your resume instantly!</p>
+    <div class="theme-toggle">
+      <button onclick="changeTheme('light')">Light Theme</button>
+      <button onclick="changeTheme('dark')">Dark Theme</button>
+    </div>
+    <button class="toggle-notes-btn" onclick="toggleNotes()">Show Info</button>
+
+    <!-- Top Notes Section (Hidden by default) -->
+<div class="top-notes" id="topNotes" style="display:none;">
+  <div class="note-box about-box">
+    <h4>About</h4>
+    <p id="resAboutTop">Short summary about yourself will appear here.
+    </p>“Computer Engineering graduate.”
+
+“Passionate about software development.”
+
+“Quick learner and team player.”
+
+“Problem-solving skills.”
+
+“Eager to grow professionally.”
+  </div>
+  <div class="note-box skills-box">
+    <h4>Skills</h4>
+    <p id="resSkillsTop">Add your skills as descriptive paragraph here.
+      How to add skills properly so that they look professional; add skills in English."
+    </p>
+  </div>
+  <div class="note-box projects-box">
+    <h4>Projects</h4>
+    <p id="resProjectsTop">Add your project details here.
+      "In the Projects section, mention what work you did, what skills you used, and which tools you worked with, all in English."
+    </p>
+  </div>
+  <div class="note-box experience-box">
+    <h4>Experience</h4>
+    <p id="resExperienceTop">Add your work experience here.
+      "In the Experience section, mention how long you worked, which projects you worked on, how much time it took, why you left the company, and keep it basic and clear for preparation."
+    </p>
+  </div>
+</div>
+
+
+  </header>
+
+  <main class="container">
+
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Enter Your Details</h2>
+      <form id="resumeForm">
+        <label>Profile Picture: <input type="file" id="profilePic" accept="image/*"></label>
+        <label>Name: <input type="text" id="name" required></label>
+        <label>Address: <input type="text" id="address"></label>
+        <label>Email: <input type="email" id="email"></label>
+        <label>Phone: <input type="text" id="phone"></label>
+        <label>About: <textarea id="about" placeholder="Short summary"></textarea></label>
+        <label>Education (comma separated): <input type="text" id="education"></label>
+                <label>Projects (comma separated): <input type="text" id="projects"></label>
+        <label>Skills (comma separated): <input type="text" id="skills"></label>
+        <label>Experience (comma separated): <input type="text" id="experience"></label>
+        <button type="button" onclick="updateResume()">Update Preview</button>
+      </form>
+    </section>
+
+    <!-- Resume Preview Section -->
+    <section class="preview-section">
+      <h2>Resume Preview</h2>
+      <div id="resumePreview" class="resume-card">
+        <div class="profile-img-container">
+          <img id="resPic" src="" alt="Profile Picture" style="display:none;">
+        </div>
+        <h1 id="resName">Your Name</h1>
+        <p id="resAddress">Address</p>
+        <p id="resEmail">Email</p>
+        <p id="resPhone">Phone</p>
+        <h3>About</h3>
+        <p id="resAbout"></p>
+        <h3>Education</h3>
+        <ul id="resEducation"></ul>
+        <h3>Projects</h3>
+        <ul id="resProjects"></ul>
+        <h3>Skills</h3>
+        <ul id="resSkills"></ul>
+        
+        <h3>Experience</h3>
+        <ul id="resExperience"></ul>
+      </div>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
